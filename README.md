@@ -1,79 +1,70 @@
-# Simple Counter with React
+# Getting Started with Create React App
 
-React improves the creation of custom components, which you can render throughout your web-app using the **ReactDOM.render()** method. A custom component allows you to divide and conquer, separating logical and visual challenges into smaller pieces- giving you greater control over the display and functionalities of each part of the web-app.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-For example, to create a bootstrap `<Card />`; component you'd code this:
+## Available Scripts
 
-```jsx
-function Card(props){
-    return (
-        <div className="card">
-            <img className="card-img-top" src="http://via.placeholder.com/350x150" alt="Card image cap" />
-            <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and fill the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    );
-}
-```
+In the project directory, you can run:
 
-After declaring it, you are able to **import** and **use** it in your webapp like this:
+### `yarn start`
 
-```jsx
-//import react into the bundle
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Card from './component/Card.jsx'
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-ReactDOM.render(<Card />, document.querySelector('#root'));
-```
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-Additionally, you can pass information through the Card component using **props**:
+### `yarn test`
 
-```html
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<!-- Use of the custom component -->
-<Card imageUrl="http://via.placeholder.com/350x150" title="A nice image" />
+### `yarn build`
 
-```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-... for usage within the render method of your Card component (notice the image src and card title):
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```jsx
-//Declaration of custom component (Card.js)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-function Card(props){
-    return (
-        <div className="card">
-            <img className="card-img-top" src={props.imageUrl} alt="Card image cap" />
-            <div className="card-body">
-                <h5 className="card-title">{props.title}</h5>
-                <p className="card-text">Some quick example text to build on the card title and fill the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    );
-}
-```
+### `yarn eject`
 
-# 📝 Instructions
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Create a seconds-counter component, called ***SecondsCounter***. It should look [like this one](https://github.com/breatheco-de/exercise-simple-counter-react/blob/master/preview.gif).
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- The whole purpose of the component is to display how many seconds have passed since the website finished loading (onLoad).
-- Use the ***ReactDOM.render()*** to render the component into the web-app.
-- Use the ***setInterval()*** function to re-render de component on every second.
-- The component does not need a local state, you can pass the number of seconds as **props** like this:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-```
-<SecondsCounter seconds={3434} />
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-```
-- You can find the clock icon on the left of the component in [Font Awesome](https://fontawesome.com/).
+## Learn More
 
-# 🔥 Bonus
-- Create an option to countdown from a given number.
-- Create stop, reset, and resume functionality
-- Create an alert when the user reaches a specified time, ie the user enters "10", an alert should render notifying the user that their time was reached
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
